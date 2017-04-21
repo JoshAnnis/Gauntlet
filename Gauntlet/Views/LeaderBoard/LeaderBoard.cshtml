@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Gauntlet.Models.ApplicationUser>
+@{
+    ViewBag.Title = "LeaderBoard";
+}
+
+<h2>LeaderBoard</h2>
+<p>Here are the top users</p>   
+<table border="1"  height="200" width="400" align="center">
+
+    <tr>
+
+
+        <th>@Html.DisplayNameFor(model => model.UserName)</th>
+
+
+
+        <th>@Html.DisplayNameFor(model => model.Points)</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem=>item.UserName) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem=>item.Points)
+            </td>
+
+        </tr>
+    }
+</table>
+
+    
